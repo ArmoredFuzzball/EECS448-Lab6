@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <script src="formChecker.js"></script>
+    <link rel="stylesheet" href="style.css">
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <form action="customerBackend.php" method="post" onsubmit="return checkForm();">
+            <b>Enter your account information (do not enter real info!):</b><br>
+            <input type="email" autocomplete="off" name="email" placeholder="email"><br>
+            <input type="password" autocomplete="off" name="password" placeholder="password"><br>
+
+            <br><b>Choose your item amounts:</b><br>
+            Cereal A ($3.79/item) <input type="number" name="CerealA" value="0"><br>
+            Cereal B ($4.29/item) <input type="number" name="CerealB" value="0"><br>
+            Cereal C ($2.67/item) <input type="number" name="CerealC" value="0"><br>
+            1/2 gal. Whole Milk ($3.49/item) <input type="number" name="HalfMilk" value="0"><br>
+
+            <br><b>Choose your delivery type:</b><br>
+            <input type="radio" name="shipping" value="7 Day">Free 7 Day<br>
+            <input type="radio" name="shipping" value="Overnight">Overnight ($50)<br>
+            <input type="radio" name="shipping" value="3 Day">3 Day ($5)<br><br>
+            <input type="submit" value="Complete order"><br><br>
+        </form>
+        <button onclick="location.reload()">Reset order</button>
+    </div>
+</body>
+
+</html>
